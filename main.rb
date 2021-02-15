@@ -188,7 +188,8 @@ class RailRoad
     trains.each_with_index { |train,index| puts " #{index+1}: Поезд № #{train.number} Тип #{train.type}" }          
   end
 end
-
+ 
 railroad = RailRoad.new
 railroad.seed
 railroad.start
+

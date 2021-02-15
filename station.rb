@@ -13,6 +13,7 @@ class Station
     #пользователь может создавать станции
     @name = name
     @trains = []
+    register_instance
     @@all_stations << self
   end
 

@@ -6,7 +6,7 @@ class Train
   attr_reader :type, :number, :route
 
   def self.find_train(number)
-    @@all_trains[number.to_s] 
+    @@all_trains[number] 
   end 
 
   @@all_trains = {}
@@ -17,7 +17,8 @@ class Train
     @type = type
     @wagons = []
     @speed = 0
-    @@all_trains[self.number] = self
+    register_instance
+    @@all_trains[number] = self
   end
 
   def add_wagons(wagon)

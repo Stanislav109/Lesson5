@@ -7,6 +7,7 @@ class Route
     @stations = []
     @stations << start_station
     @stations << end_station
+    register_instance
   end
 
   def add_station(station)
