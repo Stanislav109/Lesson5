@@ -6,8 +6,10 @@ class Train
   attr_reader :type, :number, :route
 
   def self.find_train(number)
-    @@trains[number.to_s] 
+    @@all_trains[number.to_s] 
   end 
+
+  @@all_trains = {}
 
   def initialize(number)
     #пользователь может создавать поезда
@@ -15,6 +17,7 @@ class Train
     @type = type
     @wagons = []
     @speed = 0
+    @@all_trains[self.number] = self
   end
 
   def add_wagons(wagon)

@@ -185,7 +185,7 @@ class RailRoad
   end
 
   def show_trains
-    trains.each_with_index { |train,index| puts " #{index+1}: Поезд № #{train.number} Тип #{train.type}" }            
+    trains.each_with_index { |train,index| puts " #{index+1}: Поезд № #{train.number} Тип #{train.type}" }          
   end
 end
 
